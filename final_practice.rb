@@ -57,10 +57,10 @@ puts hello
 
 
 def greet_person
-  var1 = "John"
+  first_name = "John"
   middle_name= "Jacob"
   last_name= "Jingleheimerschmidt"
-  "Hello, #{var1} #{middle_name} #{last_name}"
+  "Hello, #{first_name} #{middle_name} #{last_name}"
 end
 # Call the method at least twice, and store the return value in a variable:
 salutations = greet_person
@@ -99,28 +99,37 @@ puts not_quite_cubin
 # 5: Write a method named "check_stock" that satisfies the following interaction pattern:
 # Hint: You will only write one check_stock method that checks the quantity and then prints the corresponding statement.
 
-check_stock(4, "Coffee");
-# => "Coffee is stocked"
+# check_stock(4, "Coffee");
+# # => "Coffee is stocked"
 
-check_stock(3, "Tortillas");
-# => "Tortillas - running LOW"
+# check_stock(3, "Tortillas");
+# # => "Tortillas - running LOW"
 
-check_stock(0, "Cheese");
-# => "Cheese - OUT of stock!"
+# check_stock(0, "Cheese");
+# # => "Cheese - OUT of stock!"
 
-check_stock(1, "Salsa");
-# => "Salsa - running LOW"
-coffee_count = 4
-tortilla_count = 3
-cheese_count = 0
-salsa_count = 1
-def check_stock
-  if coffee_count >= 4 
+# check_stock(1, "Salsa");
+# # => "Salsa - running LOW"
+
+# def check_stock 
+#     coffee_count=4
+#    if coffee_count ==4
+#     puts "Coffee is stocked"
+#   end
+# end
+# inventory=check_stock
+# puts inventory
+
+def check_stock (coffee_count=4, tortilla_count=3, cheese_count=0, salsa_count=1)
+  if coffee_count == 4 
     puts "Coffee is stocked"
-  if tortilla_count <= 3 
+  end
+  if tortilla_count == 3 
     puts "Tortillas - running low"
+  end
   if cheese_count < 1 
     puts "Cheese - OUT of stock!"
+  end
   if salsa_count < 2 
     puts "Salsa - running LOW"
   end 
