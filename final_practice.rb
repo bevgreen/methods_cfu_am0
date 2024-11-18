@@ -30,7 +30,7 @@ puts greeting2
 # What is the return value of your method?
 #what's up playa
 # How many arguments did you pass your method?
-#2
+#0
 
 # 2: Write a method named "custom_greeting" that returns a greeting WITH a specific name.
 def custom_greeting
@@ -48,7 +48,7 @@ puts hello
 # What is the return value of your method?
 #hello bevs
 # How many arguments did you pass your method?
-#2
+#0
 # What data type was your argument(s)?
 #String
 
@@ -73,7 +73,7 @@ puts fullnamegreeting
 #Hello, John Jacob Jingleheimerschmidt
 
 # How many arguments did you pass your method?
-#2
+#3
 # What data type was your argument(s)?
 #string
 
@@ -91,7 +91,7 @@ puts not_quite_cubin
 # What is the return value of your method?
 #4
 # How many arguments did you pass your method?
-#2
+#0
 # What data type was your argument(s)?
 #integer
 # Bonus: Print a sentence that interpolates the return value of your square method.
@@ -128,5 +128,3 @@ end
 
 inventory = check_stock
 puts inventory 
-
-#I will update this code tomorrow, I have a family event tonight but I can update and fix it tomorrow. 
