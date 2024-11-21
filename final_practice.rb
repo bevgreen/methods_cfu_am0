@@ -56,15 +56,13 @@ puts hello
 # 3: Write a method named "greet_person" that takes in 3 strings, a first, middle, and last name, and returns a sentence with the full name.
 
 
-def greet_person
-  first_name = "John"
-  middle_name= "Jacob"
-  last_name= "Jingleheimerschmidt"
+def greet_person(first_name, middle_name, last_name)
   "Hello, #{first_name} #{middle_name} #{last_name}"
 end
+
 # Call the method at least twice, and store the return value in a variable:
-salutations = greet_person
-fullnamegreeting = greet_person
+salutations = greet_person("John", "Jacob", "Jingleheimerschmidt")
+fullnamegreeting = greet_person("Beverly", "Louise", "Green")
 # Use the puts or print command to see the return value in the console:
 puts salutations
 puts fullnamegreeting
@@ -78,20 +76,19 @@ puts fullnamegreeting
 #string
 
 # 4: Write a method named "square" that takes in one integer, and returns the square of that integer.
-def square
-  number = 2
+def square(number)
   number**2
 end
 # Call the method at least twice, and store the return value in a variable:
-squarin = square
-not_quite_cubin= square
+squarin = square(4)
+not_quite_cubin= square(8)
 # Use the puts or print command to see the return value in the console:
 puts squarin
 puts not_quite_cubin
 # What is the return value of your method?
-#4
+#16 and 64
 # How many arguments did you pass your method?
-#0
+#1
 # What data type was your argument(s)?
 #integer
 # Bonus: Print a sentence that interpolates the return value of your square method.
@@ -120,20 +117,16 @@ puts not_quite_cubin
 # inventory=check_stock
 # puts inventory
 
-def check_stock (coffee_count=4, tortilla_count=3, cheese_count=0, salsa_count=1)
-  if coffee_count == 4 
-    puts "Coffee is stocked"
+def check_stock (num, item)
+  if num >= 4
+     "#{item} is stocked"
+  elsif num >= 1
+     "#{item} is running low"
+  else
+     "#{item} is OUT of Stock"
   end
-  if tortilla_count == 3 
-    puts "Tortillas - running low"
-  end
-  if cheese_count < 1 
-    puts "Cheese - OUT of stock!"
-  end
-  if salsa_count < 2 
-    puts "Salsa - running LOW"
-  end 
-end 
-
-inventory = check_stock
-puts inventory 
+end
+puts check_stock(4,"Coffee")
+puts check_stock(3, "Tortillas")
+puts check_stock(0, "Cheese")
+puts check_stock(1, "Salsa")
